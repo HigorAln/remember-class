@@ -1,4 +1,4 @@
-interface JoinProps {
+export interface JoinProps {
   class: string | Record<string, boolean>;
   options?: Record<string, boolean>;
 }
