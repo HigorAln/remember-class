@@ -83,7 +83,6 @@
 <br/>
 
 ## Impulsionar
-<br/>
 <p>
   Se você gostou da biblioteca, e quer me impulsionar, por favor, me compre um café
 </p>
