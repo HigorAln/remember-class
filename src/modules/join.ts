@@ -1,16 +1,9 @@
-export interface JoinProps {
-  class: string | Record<string, boolean>;
-  options?: Record<string, boolean>;
-}
+type Option = string | Record<string, boolean>;
 
-export function join(option: JoinProps["class"], options?: JoinProps['options']) {
+export function join(option?: Option, options?: Option, ...rest: Option[]) {
   let newClassName = "";
 
-  if (!option) {
-    return "";
-  }
-
-  function mergeClass(union: JoinProps["options"]) {
+  function mergeClass(union: Record<string, boolean>) {
     const optionsArray = Object.entries(union!);
 
     optionsArray.forEach(([key, value]) => {
@@ -19,17 +12,34 @@ export function join(option: JoinProps["class"], options?: JoinProps['options'])
       }
     });
   }
-  
 
-  if (typeof option === "string") {
-    newClassName = newClassName + " " + option;
-  }else {
-    mergeClass(option);
+  if (option) {
+    if (typeof option === "string") {
+      newClassName = newClassName + " " + option;
+    }else {
+      mergeClass(option);
+    }
   }
+
 
   if (options) {
-    mergeClass(options);
+    if (typeof options === "string") {
+      newClassName = newClassName + " " + options;
+    } else {
+      mergeClass(options);
+    }
   }
+
+  if (rest.length > 0) {
+    rest.forEach((item) => {
+      if (typeof item === "string") {
+        newClassName = newClassName + " " + item;
+      } else {
+        mergeClass(item);
+      }
+    });
+  }
+
 
   return newClassName;
 }
