@@ -4,7 +4,7 @@
   "description": "",
   "main": "dist/index.js",
   "scripts": {
-    "run": "tsx watch src/index.ts",
+    "dev": "tsx watch src/index.ts",
     "build": "tsup src/index.ts"
   },
   "keywords": [],
