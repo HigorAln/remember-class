@@ -9,9 +9,16 @@
 
 ```bash
   npm install remember-class
+```
+ou
+```bash
   yarn add remember-class
+```
+ou
+```bash
   pnpm add remember-class
 ```
+
 
 ## Utilização
 <br/>
