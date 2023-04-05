@@ -85,6 +85,9 @@
 ## Impulsionar
 <br/>
 <p>
+  Se você gostou da biblioteca, e quer me impulsionar, por favor, me compre um café
+</p>
+<p>
   <a href="https://www.buymeacoffee.com/higoraln" target="_blank">
     <img src="https://cdn.buymeacoffee.com/buttons/default-orange.png" alt="Buy Me A Coffee" style="height: 51px !important;width: 217px !important;" >
   </a>
