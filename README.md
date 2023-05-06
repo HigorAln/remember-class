@@ -24,16 +24,16 @@ ou
 <br/>
 
 ```javascript
-  import rememberClass from 'remember-class'
+  import { join } from 'remember-class'
 
-  rememberClass('bg-red-500', 'text-white', 'p-4', 'rounded-md')
-  rememberClass('foo', { bar: true }) => 'foo bar'
-  rememberClass('foo', 'bar') => 'foo bar'
-  rememberClass({ 'foo-bar': true }) => 'foo-bar'
-  rememberClass({ 'foo-bar': false }) => ''
-  rememberClass({ foo: true }, { bar: true }) => 'foo bar'
-  rememberClass({ foo: true, bar: true }) => 'foo bar'
-  rememberClass('foo', { bar: true, duck: false }, 'baz', { quux: true }) => 'foo bar baz quux'
+  join('bg-red-500', 'text-white', 'p-4', 'rounded-md')
+  join('foo', { bar: true }) => 'foo bar'
+  join('foo', 'bar') => 'foo bar'
+  join({ 'foo-bar': true }) => 'foo-bar'
+  join({ 'foo-bar': false }) => ''
+  join({ foo: true }, { bar: true }) => 'foo bar'
+  join({ foo: true, bar: true }) => 'foo bar'
+  join('foo', { bar: true, duck: false }, 'baz', { quux: true }) => 'foo bar baz quux'
 ```
 <br/>
 
